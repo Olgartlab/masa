@@ -2,16 +2,19 @@
   display: inline-flex;
   padding: 10px 20px;
 
-  color: $color-default-white;
+  color: $color-cerulean-blue;
 
-  background-color: $color-neon-blue;
-  border: none;
+  background-color: $color-default-white;
+  border-radius: 30px;
+  border: 1px solid $color-cerulean-blue;
   cursor: pointer;
 
   transition: opacity $trans-default;
 
-  &--red {
-    background-color: $color-torch-red;
+  &--on-dark {
+    color: $color-default-white;
+    background-color: $color-transparent;
+    border: 1px solid $color-default-white;
   }
 
   &:disabled {
