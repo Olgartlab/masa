@@ -20,6 +20,11 @@
     letter-spacing: 0.28px;
     text-transform: uppercase;
     color: $color-cerulean-blue;
+
+    @include vp-767 {
+      font-size: 12px;
+      line-height: 12px;
+    }
   }
 
   &--on-dark {
@@ -47,6 +52,11 @@
   height: 46px;
   border-radius: 50%;
   background-color: $color-cerulean-blue;
+
+  @include vp-767 {
+    width: 34px;
+    height: 34px;
+  }
 }
 
 .btn__wrapper svg {

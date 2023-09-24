@@ -1,5 +1,9 @@
 .news__container {
   padding-top: 124px;
+
+  @include vp-1199 {
+    padding-top: 101px;
+  }
 }
 
 .news__title {
@@ -12,6 +16,16 @@
     margin: 0 auto;
     margin-bottom: 46px;
     text-align: center;
+
+    @include vp-1199 {
+      font-size: 34px;
+      margin-bottom: 30px;
+    }
+
+    @include vp-767 {
+      font-size: 20px;
+      line-height: 20px;
+    }
   }
 }
 
@@ -21,6 +35,14 @@
   margin: 0 auto;
   justify-content: space-between;
   padding-bottom: 38px;
+
+  @include vp-1199 {
+    width: 100%;
+  }
+
+  @include vp-767 {
+    overflow: hidden;
+  }
 }
 
 .news__filter-btn {
@@ -41,6 +63,11 @@
   }
 }
 
+.news__swiper-wrapper {
+  @include vp-1199 {
+    height: 96vw;
+  }
+}
 .news__slide {
   position: relative;
   flex-direction: column;
@@ -55,6 +82,18 @@
   &--large {
     min-width: calc((100% - 96px) / 2 + 32px);
    // padding-top: 249px;
+
+   @include vp-1199 {
+    min-width: unset;
+   }
+  }
+
+  @include vp-1199 {
+    aspect-ratio: 1/1.08;
+    padding-top: 0;
+    height: auto;
+    width: auto;
+    min-height: 350px;
   }
 }
 
@@ -102,6 +141,16 @@ object-fit: cover;
     max-width: 214px;
     padding: 6px 10px 1px 0;
     margin: 0;
+
+    @include vp-1199 {
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    @include vp-767 {
+      font-size: 16px;
+      line-height: 18px;
+    }
   }
 
   &--large {
@@ -206,6 +255,10 @@ object-fit: cover;
   min-height: 32px;
   padding-top: 40px;
   padding-bottom: 123px;
+
+  @include vp-1199 {
+    padding-bottom: 99px;
+  }
 }
 
 .news__button-prev,
