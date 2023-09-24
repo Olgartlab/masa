@@ -1,0 +1,64 @@
+.header {
+  color: $color-default-white;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background-color: $color-transparent;
+}
+
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 31px;
+}
+
+.header__nav-list {
+  display: none;
+}
+
+.header.is-open .header__nav-list {
+  display: block;
+}
+
+.header__logo-link {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  border-radius: 50%;
+  background-color: $color-default-white;
+}
+
+.header__logo-link svg {
+  width: 28px;
+  height: 28px;
+  display: block;
+  margin: auto;
+  color: $color-cerulean-blue;
+}
+
+.header__menu-button {
+  padding-left: 20px;
+  column-gap: 20px;
+
+  span {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 14px;
+    letter-spacing: 0.28px;
+    text-transform: uppercase;
+    color: #316dc2;
+  }
+}
+
+.header__nav-toggle svg {
+  width: 20px;
+  height: 20px;
+  margin: auto;
+}
+
+.header__close-icon {
+  display: none;
+}

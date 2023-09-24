@@ -1,0 +1,134 @@
+.reviews__container {
+  padding-top: 118px;
+}
+
+.reviews__title-wrapper {
+  h2 {
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 50px;
+    margin: 0;
+    margin-left: auto;
+    margin-bottom: 45px;
+    color: $color-cerulean-blue;
+  }
+}
+
+.reviews__swiper {
+  display: flex;
+  padding-bottom: 40px;
+}
+
+.reviews__slide {
+  margin: 0;
+  padding: 50px;
+  padding-bottom: 41px;
+  border-radius: 16px;
+  border: 1px solid #316dc2;
+  height: auto;
+}
+
+.reviews__slide-content {
+  display: flex;
+  padding-bottom: 25px;
+}
+
+.reviews__author {
+  display: flex;
+
+  p {
+    margin: 0;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    color: $color-cerulean-blue;
+  }
+}
+
+.reviews__info-wrapper {
+  display: flex;
+}
+
+.reviews__info {
+  span {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 12px; /* 100% */
+    letter-spacing: 0.12px;
+    text-transform: uppercase;
+    color: $color-cerulean-blue;
+  }
+
+  p {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+  }
+}
+
+.reviews__text-wrapper {
+  h4 {
+    margin: 0;
+    margin-bottom: 14px;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    color: $color-cerulean-blue;
+  }
+
+  p {
+    margin: 0;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+  }
+}
+
+.reviews__controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 121px;
+}
+
+.reviews__scrollbar {
+  position: relative;
+  width: calc(100% - 106px);
+  background-color: rgba(49, 109, 194, 0.2);
+  height: 2px;
+}
+
+.reviews__scrollbar .swiper-scrollbar-drag {
+  background-color: $color-cerulean-blue;
+  opacity: 1;
+}
+
+.reviews__buttons-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 54px;
+  height: 22px;
+}
+
+.reviews__button {
+  justify-content: center;
+  align-items: center;
+  width: 22px;
+  height: 22px;
+  stroke: #316dc2;
+  cursor: pointer;
+  border-radius: 50%;
+  outline: 0;
+  display: flex;
+
+  svg {
+    display: block;
+    margin: auto;
+  }
+}

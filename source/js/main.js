@@ -1,7 +1,12 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
-
+import { initSwipers } from './modules/init-swipers';
+import { initAccordions } from './modules/accordion/init-accordion';
+import { initMap } from './modules/map/map';
+import { initBurger } from './modules/menu';
+import { setActiveButton } from './modules/news-toggle';
+import { CustomSelect } from './modules/select/custom-select';
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -10,6 +15,9 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
 
   iosVhFix();
+  initSwipers();
+  initMap();
+  initBurger();
 
   // Modules
   // ---------------------------------
@@ -21,6 +29,10 @@ window.addEventListener('DOMContentLoaded', () => {
     const form = new Form();
     window.form = form;
     form.init();
+    initAccordions();
+    setActiveButton();
+    const select = new CustomSelect();
+    select.init();
   });
 });
 

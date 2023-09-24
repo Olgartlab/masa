@@ -38,10 +38,10 @@
     align-items: center;
     width: 100%;
     min-height: 100%;
-    padding: 60px 40px;
+    padding: 51px 40px 60px 40px;
 
     @include vp-767 {
-      padding: 60px 16px;
+      padding: 24px 15px;
     }
   }
 
@@ -58,15 +58,15 @@
 
   &__content {
     position: relative;
-
-    width: 600px;
+    width: 510px;
+    border-radius: 16px;
     padding: 40px;
 
     background-color: $color-default-white;
 
     @include vp-767 {
       width: 100%;
-      padding: 20px;
+      padding: 37px 15px;
     }
   }
 
@@ -83,6 +83,11 @@
     background: $color-transparent;
     border: none;
     cursor: pointer;
+
+    @include vp-767 {
+      top: 7px;
+      right: 8px;
+    }
   }
 
   &--responsive {
@@ -115,5 +120,224 @@
     opacity: 1;
 
     pointer-events: auto;
+  }
+}
+
+.modal__form-container h2 {
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 36px;
+  color: $color-primary;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 9px;
+
+  @include vp-1199 {
+    font-size: 28px;
+    line-height: 28px;
+    margin-bottom: 14px;
+  }
+
+  @include vp-767 {
+    font-size: 18px;
+    line-height: 18px;
+    margin-bottom: 6px;
+  }
+}
+
+.modal__form-container p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 16px;
+
+  @include vp-1199 {
+    line-height: 20px;
+    margin-bottom: 21px;
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+    padding: 0 30px;
+  }
+}
+
+.modal__close-icon {
+  fill: $color-primary;
+
+  @include vp-767 {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+.modal__user-name,
+.modal__user-phone {
+  @include vp-767 {
+    margin-bottom: 15px;
+  }
+
+  label {
+    color: rgba(72, 72, 72, 0.8);
+
+    @include vp-767 {
+      margin-bottom: 8px;
+      font-size: 14px;
+      line-height: 14px;
+    }
+  }
+
+  input {
+    border: 1px solid rgba(72, 72, 72, 0.3);
+    color: rgba(72, 72, 72, 0.8);
+
+
+    &:hover,
+    &:focus-visible {
+      border: 1px solid rgba(72, 72, 72, 1);
+      color: rgba(72, 72, 72, 1);
+
+      & + label {
+        color: rgba(72, 72, 72, 1);
+      }
+    }
+
+    &:disabled {
+      border: 1px solid rgba(169, 175, 183, 0.5);
+      background: rgba(169, 175, 183, 0.2);
+
+      & + label {
+        color: rgba(72, 72, 72, 0.6);
+      }
+    }
+
+    @include vp-767 {
+      height: 44px;
+    }
+  }
+}
+
+.modal__select {
+  @include vp-767 {
+    margin-bottom: 18px;
+  }
+
+  label {
+    color: rgba(72, 72, 72, 0.8);
+
+    @include vp-767 {
+      font-size: 14px;
+      line-height: 14px;
+      margin-bottom: 8px;
+    }
+  }
+
+  button {
+    border: 1px solid rgba(72, 72, 72, 0.3);
+
+    &:hover,
+    &:focus,
+    &:active {
+      border: 1px solid rgba(72, 72, 72, 1);
+
+      & ~ label {
+        color: rgba(72, 72, 72, 1);
+      }
+    }
+
+    &:disabled {
+      pointer-events: none;
+      opacity: 0.3;
+    }
+
+    @include vp-767 {
+      height: 44px;
+    }
+  }
+
+  &.not-empty .custom-select__text {
+    color: $color-primary;
+  }
+
+  .custom-select__list {
+    border: 1px solid $color-primary;
+  }
+}
+
+.modal__button {
+  justify-content: flex-end;
+  margin: 0 auto;
+
+  @include vp-767 {
+    width: 100%;
+  }
+}
+
+.modal__button span {
+  font-family: $ff-manrope;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 14px;
+  letter-spacing: 0.28px;
+  text-transform: uppercase;
+  color: $color-cerulean-blue;
+  margin: 0 auto;
+
+  @include vp-767 {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 12px;
+    letter-spacing: 0.24px;
+  }
+}
+
+.modal__button span:last-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 46px;
+  height: 46px;
+  background-color: $color-cerulean-blue;
+  border-radius: 50%;
+  margin: 0;
+
+  @include vp-767 {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+.modal__link-icon {
+  stroke: $color-default-white;
+  transition: 0.3s;
+}
+
+.modal__select .custom-select__icon {
+  background-color: $color-primary;
+}
+
+.modal__toggle {
+  margin-bottom: 32px;
+
+  @include vp-767 {
+    margin-bottom: 25px;
+  }
+
+  .custom-toggle__label {
+    color: $color-primary;
+  }
+
+  .custom-toggle__icon {
+    border: 1px solid $color-cerulean-blue;
+  }
+
+  input:checked + .custom-toggle__icon {
+    background-color: $color-cerulean-blue;
+
+    .custom-toggle__icon {
+      stroke: $color-default-white;
+    }
   }
 }

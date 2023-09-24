@@ -1,15 +1,26 @@
 .btn {
-  display: inline-flex;
-  padding: 10px 20px;
-
+  display: flex;
+  padding: 3px 3px 3px 20px;
+  align-items: center;
   color: $color-cerulean-blue;
-
+  justify-content: space-between;
   background-color: $color-default-white;
   border-radius: 30px;
   border: 1px solid $color-cerulean-blue;
   cursor: pointer;
-
+  column-gap: 30px;
+  text-transform: uppercase;
+  letter-spacing: 0.28px;
   transition: opacity $trans-default;
+
+  span {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 14px;
+    letter-spacing: 0.28px;
+    text-transform: uppercase;
+    color: $color-cerulean-blue;
+  }
 
   &--on-dark {
     color: $color-default-white;
@@ -26,4 +37,18 @@
   @include hover-focus {
     opacity: 0.8;
   }
+}
+
+.btn__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background-color: $color-cerulean-blue;
+}
+
+.btn__wrapper svg {
+  color: $color-default-white;
 }
